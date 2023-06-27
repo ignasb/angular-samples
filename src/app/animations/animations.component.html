@@ -1,0 +1,11 @@
+<div
+  (mouseenter)="onCardHover()"
+  (mouseleave)="onCardLeave()"
+  [@cardAnimation]="isCardHovered ? 'card-hovered' : 'card-leave'"
+  class="card"
+>
+  <p class="card__title">Some title</p>
+  <p class="card__body">
+    Ipsum smipsum loren pipsum smipsum smipsum loren pipsum smipsum loren pipsum
+  </p>
+</div>

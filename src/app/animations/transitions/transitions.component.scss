@@ -1,0 +1,87 @@
+.color-transition-button {
+  color: magenta;
+  background-color: yellowgreen;
+  width: 80px;
+  height: 40px;
+  transition: color 200ms ease-in 50ms, background-color 200ms ease-in 50ms;
+
+  &:hover {
+    color: rebeccapurple;
+    background-color: yellow;
+    transition: color 200ms ease-in 50ms, background-color 200ms ease-in 50ms;
+  }
+}
+
+.navbar {
+  font-family: "Roboto", sans-serif;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-flow: row nowrap;
+
+    li {
+      position: relative;
+      background-color: rgb(229, 229, 229);
+      padding: 16px;
+      cursor: pointer;
+
+      a {
+        text-decoration: none;
+        color: rgb(20, 166, 15);
+      }
+
+      &:hover {
+        background-color: rgb(20, 166, 15);
+
+        > a {
+          color: rgb(229, 229, 229);
+        }
+
+        ul {
+          transform: scale(1, 1);
+          transition: transform 100ms ease-in;
+        }
+      }
+    }
+  }
+
+  .navbar__submenu {
+    position: absolute;
+    display: flex;
+    flex-flow: column nowrap;
+    top: 50px;
+    left: 0px;
+    width: 120px;
+    transform: scale(1, 0);
+    transform-origin: top center;
+    transition: transform 100ms ease-out 200ms;
+  }
+}
+
+.state-transition-input {
+  transition: border-color 200ms, color 200ms;
+  height: 24px;
+  font-size: 16px;
+
+  &:valid {
+    border-color: green;
+    color: green;
+  }
+
+  &:invalid {
+    border-color: red;
+    color: red;
+  }
+
+  &:focus {
+    border-color: peru;
+    color: peru;
+  }
+}
+
+.example {
+  margin: 20px;
+}

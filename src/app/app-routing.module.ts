@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AnimationsComponent } from './animations/animations.component';
+import { TransitionsComponent } from './animations/transitions/transitions.component';
 
 const routes: Routes = [{
   path: '',
@@ -9,6 +10,9 @@ const routes: Routes = [{
 }, {
   path: 'animations',
   component: AnimationsComponent
+}, {
+  path: 'transitions',
+  component: TransitionsComponent
 }];
 
 @NgModule({

@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { AnimationsComponent } from './animations.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { OpenCloseComponent } from './open-close/open-close.component';
+import { TransitionsComponent } from './transitions/transitions.component';
 
 
 @NgModule({
   declarations: [
     AnimationsComponent,
-    OpenCloseComponent
+    OpenCloseComponent,
+    TransitionsComponent
   ],
   imports: [
     CommonModule,

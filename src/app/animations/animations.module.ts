@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { OpenCloseComponent } from './open-close/open-close.component';
 import { TransitionsComponent } from './transitions/transitions.component';
 import { SimpleSliderComponent } from './simple-slider/simple-slider.component';
+import { FadeInComponent } from './fade-in/fade-in.component';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { SimpleSliderComponent } from './simple-slider/simple-slider.component';
     AnimationsComponent,
     OpenCloseComponent,
     TransitionsComponent,
-    SimpleSliderComponent
+    SimpleSliderComponent,
+    FadeInComponent
   ],
   imports: [
     CommonModule,

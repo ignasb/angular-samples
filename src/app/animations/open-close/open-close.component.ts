@@ -28,7 +28,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   ]
 })
 export class OpenCloseComponent {
-  isOpen = true;
+  isOpen = false;
 
   toggle() {
     this.isOpen = !this.isOpen;

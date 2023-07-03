@@ -1,0 +1,43 @@
+.slider {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 260px;
+  height: 140px;
+  overflow: hidden;
+  border: 1px solid black;
+  padding: 10px;
+
+  &__controls {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+
+    button {
+      height: 32px;
+      width: 60px;
+      margin: 4px;
+    }
+  }
+
+  &__slides {
+    display: flex;
+    flex-flow: row nowrap;
+    position: relative;
+
+    transition-property: left, right;
+    transition-duration: 200ms;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition-delay: 10ms;
+  }
+
+  &__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    min-width: 120px;
+    height: 80px;
+    font-size: 48px;
+    border: 1px solid gray;
+  }
+}

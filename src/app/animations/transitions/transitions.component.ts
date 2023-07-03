@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { AfterViewChecked, AfterViewInit, ChangeDetectionStrategy, Component, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-transitions',
@@ -6,6 +6,13 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrls: ['./transitions.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class TransitionsComponent {
+export class TransitionsComponent implements AfterViewInit {
+  @ViewChild('basicInput')
+  inputElement!: { nativeElement: HTMLInputElement };
 
+  ngAfterViewInit(): void {
+    this.inputElement.nativeElement.addEventListener('transitionend', (ev) => {
+      console.log(`${ev.propertyName}-${ev.pseudoElement || 'EMPTY'}-${ev.elapsedTime}`);
+    })
+  }
 }

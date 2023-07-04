@@ -1,6 +1,12 @@
 <button (click)="active('A')">Active A</button>
 <button (click)="active('B')">Active B</button>
-<div class="fadein">
-  <div #A class="fadein__card">A</div>
-  <div #B class="fadein__card">B</div>
+<div
+  (mouseover)="onMouseEnter()"
+  (mouseleave)="onMouseLeave()"
+  (click)="onMouseClick()"
+  class="fadein"
+>
+  <div #A [@slideAnimation]="slideState" class="fadein__card">A</div>
+  <div #B [@slideAnimation]="slideState" class="fadein__card">B</div>
 </div>
+{{ slideState }}

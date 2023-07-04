@@ -1,12 +1,58 @@
-import { ChangeDetectionStrategy, Component, ViewChild } from '@angular/core';
+import { animate, state, style, transition, trigger } from '@angular/animations';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-fade-in',
   templateUrl: './fade-in.component.html',
   styleUrls: ['./fade-in.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  animations: [
+    trigger('slideAnimation', [
+      state('active', style({
+        color: 'rgb(51, 51, 51)',
+        backgroundColor: 'green'
+      })),
+      state('hovered', style({
+        transform: 'scale3d(1.05, 1.05, 1.05)',
+        backgroundColor: 'rgb(0, 120, 120)',
+        color: 'white'
+      })),
+      transition('default => active', [
+        style({
+          transform: 'translateX(-200px)',
+          opacity: 0
+        }),
+        animate('0.2s ease', style({
+          transform: 'translateX(0)',
+          opacity: 1
+        }))
+      ]),
+      transition('active => hovered', [
+        animate('0.3s 0s ease-out', style({
+          transform: 'scale3d(1.05, 1.05, 1.05)',
+          backgroundColor: 'rgb(0, 120, 120)',
+          color: 'white'
+        }))
+      ]),
+      transition('hovered => active', [
+        animate('0.3s 0s ease-out', style({
+          transform: 'scale3d(1, 1, 1)',
+          color: 'rgb(51, 51, 51)',
+          backgroundColor: 'green'
+        }))
+      ]),
+      transition('hovered => default', [
+        animate('0.3s 0s ease-out', style({
+          backgroundColor: 'white',
+          color: 'black'
+        }))
+      ])
+    ])
+  ]
 })
 export class FadeInComponent {
+  slideState = 'default';
+
   @ViewChild('A')
   compA!: { nativeElement: HTMLDivElement; };
 
@@ -33,5 +79,21 @@ export class FadeInComponent {
       this.compB.nativeElement.style.left = '0px';
       this.compB.nativeElement.classList.add('fadein__card--active');
     }
+  }
+
+  onMouseEnter(): void {
+    this.slideState = 'hovered'
+  }
+
+  onMouseClick(): void {
+    if (this.slideState === 'active') {
+      this.slideState = 'hovered';
+    } else {
+      this.slideState = 'active';
+    }
+  }
+
+  onMouseLeave(): void {
+    this.slideState = 'default';
   }
 }

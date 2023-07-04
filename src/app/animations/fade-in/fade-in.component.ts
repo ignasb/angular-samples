@@ -17,6 +17,13 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit, ViewChil
         backgroundColor: 'rgb(0, 120, 120)',
         color: 'white'
       })),
+      transition('default => hovered', [
+        animate('0.2s ease-out', style({
+          transform: 'scale3d(1.05, 1.05, 1.05)',
+          backgroundColor: 'rgb(0, 120, 120)',
+          color: 'white'
+        }))
+      ]),
       transition('default => active', [
         style({
           transform: 'translateX(-200px)',

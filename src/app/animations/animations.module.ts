@@ -6,6 +6,7 @@ import { OpenCloseComponent } from './open-close/open-close.component';
 import { TransitionsComponent } from './transitions/transitions.component';
 import { SimpleSliderComponent } from './simple-slider/simple-slider.component';
 import { FadeInComponent } from './fade-in/fade-in.component';
+import { AnimatedSquareComponent } from './animated-square/animated-square.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { FadeInComponent } from './fade-in/fade-in.component';
     OpenCloseComponent,
     TransitionsComponent,
     SimpleSliderComponent,
-    FadeInComponent
+    FadeInComponent,
+    AnimatedSquareComponent
   ],
   imports: [
     CommonModule,

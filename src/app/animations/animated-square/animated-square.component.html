@@ -1,0 +1,9 @@
+<div
+  [@squareAnimation]="animationState"
+  (mouseenter)="onMouseEnter()"
+  (mouseleave)="onMouseLeave()"
+  (click)="onMouseClick()"
+  class="square"
+>
+  <p>{{ animationState }}</p>
+</div>

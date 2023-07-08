@@ -1,0 +1,29 @@
+<app-content-projection-single-slot>
+  <p>Projected content passed to component</p>
+</app-content-projection-single-slot>
+
+<app-content-projection-multiple-slot>
+  <p>Projected default content</p>
+  <div class="card" projectedCard>
+    <h5 class="card__title">Card title</h5>
+    <p class="card__content">
+      Sample card content text and etc. which give more information for the
+      user.
+      <span style="font-weight: 700; color: brown"
+        >Also card is styled from scope which is projected from, so it means it
+        can be easily styled.</span
+      >
+    </p>
+  </div>
+  <div class="select" projectedSelect>
+    <select
+      [(ngModel)]="selectedValue"
+      (ngModelChange)="onSelectChange($event)"
+    >
+      <option *ngFor="let car of cars" [ngValue]="car">{{ car }}</option>
+    </select>
+    <p>
+      Selected value: <span style="font-weight: 700">{{ selectedValue }}</span>
+    </p>
+  </div>
+</app-content-projection-multiple-slot>

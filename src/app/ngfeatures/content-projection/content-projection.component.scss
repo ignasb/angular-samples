@@ -1,0 +1,17 @@
+.card {
+  margin: 12px;
+  width: 180px;
+  height: 180px;
+
+  border: 1px solid gray;
+  border-radius: 12px;
+
+  &__title {
+    color: rebeccapurple;
+  }
+
+  &__content {
+    font-size: 12px;
+    color: yellowgreen;
+  }
+}

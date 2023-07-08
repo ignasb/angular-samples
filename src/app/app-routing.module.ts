@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AnimationsComponent } from './animations/animations.component';
 import { TransitionsComponent } from './animations/transitions/transitions.component';
+import { ContentProjectionComponent } from './ngfeatures/content-projection/content-projection.component';
 
 const routes: Routes = [{
   path: '',
@@ -13,6 +14,9 @@ const routes: Routes = [{
 }, {
   path: 'transitions',
   component: TransitionsComponent
+}, {
+  path: 'content-projection',
+  component: ContentProjectionComponent
 }];
 
 @NgModule({

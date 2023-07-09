@@ -4,12 +4,15 @@ import { ContentProjectionSingleSlotComponent } from "./content-projection-singl
 import { ContentProjectionMultipleSlotComponent } from './content-projection-multiple-slot/content-projection-multiple-slot.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { CommonModule } from "@angular/common";
+import { ConditionalContentDirective, ConditionalContentProjectionComponent } from './conditional-content-projection/conditional-content-projection/conditional-content-projection.component';
 
 @NgModule({
   declarations: [
     ContentProjectionComponent,
     ContentProjectionSingleSlotComponent,
-    ContentProjectionMultipleSlotComponent
+    ContentProjectionMultipleSlotComponent,
+    ConditionalContentProjectionComponent,
+    ConditionalContentDirective
   ],
   imports: [
     FormsModule,

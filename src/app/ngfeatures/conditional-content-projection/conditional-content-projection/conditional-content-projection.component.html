@@ -1,0 +1,4 @@
+<button (click)="toggleFirst()">Toggle First</button>
+<div *ngIf="isFirstEnabled">
+  <ng-container [ngTemplateOutlet]="content.templateRef"></ng-container>
+</div>

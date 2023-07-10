@@ -1,0 +1,11 @@
+<button (click)="addRandomAnimal()">Add</button>
+<p>List items:</p>
+<div class="list" [@listAnimation]="listItems.length">
+  <div
+    class="list__item"
+    *ngFor="let item of listItems; let i = index; trackBy: trackById"
+  >
+    {{ item.title }}
+    <span (click)="removeFromList(item.id)">X</span>
+  </div>
+</div>

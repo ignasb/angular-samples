@@ -1,0 +1,10 @@
+.list {
+  width: 120px;
+  margin-bottom: 60px;
+
+  &__item {
+    border: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+  }
+}

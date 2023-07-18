@@ -10,10 +10,16 @@ const routes: Routes = [{
   pathMatch: 'full'
 }, {
   path: 'animations',
-  component: AnimationsComponent
+  component: AnimationsComponent,
+  data: {
+    transitionState: 'AnimationsPage'
+  }
 }, {
   path: 'transitions',
-  component: TransitionsComponent
+  component: TransitionsComponent,
+  data: {
+    transitionState: 'TransitionsPage'
+  }
 }, {
   path: 'content-projection',
   component: ContentProjectionComponent

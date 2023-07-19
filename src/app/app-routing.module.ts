@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AnimationsComponent } from './animations/animations.component';
 import { TransitionsComponent } from './animations/transitions/transitions.component';
 import { ContentProjectionComponent } from './ngfeatures/content-projection/content-projection.component';
+import { Animations2Component } from './animations2/animations2.component';
 
 const routes: Routes = [{
   path: '',
@@ -19,6 +20,12 @@ const routes: Routes = [{
   component: TransitionsComponent,
   data: {
     transitionState: 'TransitionsPage'
+  }
+}, {
+  path: 'animations2',
+  component: Animations2Component,
+  data: {
+    transitionState: 'Animations2Page'
   }
 }, {
   path: 'content-projection',

@@ -1,0 +1,5 @@
+<input type="text" [ngModel]="filter" (ngModelChange)="onSearch($event)" />
+
+<ul>
+  <li @listAnimation *ngFor="let item of filteredItems">{{ item }}</li>
+</ul>

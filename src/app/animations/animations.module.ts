@@ -8,6 +8,7 @@ import { SimpleSliderComponent } from './simple-slider/simple-slider.component';
 import { FadeInComponent } from './fade-in/fade-in.component';
 import { AnimatedSquareComponent } from './animated-square/animated-square.component';
 import { StaggeredAnimatedListComponent } from './staggered-animated-list/staggered-animated-list.component';
+import { SimpleButtonAnimationComponent } from './simple-button-animation/simple-button-animation.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { StaggeredAnimatedListComponent } from './staggered-animated-list/stagge
     SimpleSliderComponent,
     FadeInComponent,
     AnimatedSquareComponent,
-    StaggeredAnimatedListComponent
+    StaggeredAnimatedListComponent,
+    SimpleButtonAnimationComponent
   ],
   imports: [
     CommonModule,

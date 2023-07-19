@@ -1,0 +1,19 @@
+<div
+  *ngIf="isOpen"
+  @enterLeave
+  style="height: 100px; width: 100px; border: 1px solid red"
+>
+  Enter/Leave animation
+</div>
+
+<button [@openClose]="isOpen ? 'open' : 'closed'" (click)="toggle()">
+  Open/Close
+</button>
+
+<div
+  [@flyInOut]="isOpen ? 'in' : 'out'"
+  *ngIf="isOpen"
+  style="height: 200px; width: 200px; border: 1px solid black"
+>
+  Just basic div
+</div>

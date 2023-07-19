@@ -1,4 +1,4 @@
-import { animate, state, style, transition, trigger } from '@angular/animations';
+import { animate, keyframes, state, style, transition, trigger } from '@angular/animations';
 import { Component } from '@angular/core';
 
 @Component({
@@ -8,21 +8,21 @@ import { Component } from '@angular/core';
   animations: [
     trigger('openClose', [
       state('open', style({
-        height: '200px',
+        // height: '200px',
         opacity: 1,
         backgroundColor: 'yellow'
       })),
       state('closed', style({
-        height: '100px',
+        // height: '200px',
         opacity: 0.8,
         backgroundColor: 'blue'
       })),
-      transition('open => closed', [
-        animate('1000ms')
-      ]),
-      transition('closed => open', [
-        animate('300ms')
-      ])
+      transition('* => *', animate('2s', keyframes([
+        style({ opacity: 0.1, offset: 0.1 }),
+        style({ opacity: 0.6, offset: 0.2 }),
+        style({ opacity: 1, offset: 0.5 }),
+        style({ opacity: 0.2, offset: 0.7 })
+      ])))
     ]),
     trigger('flyInOut', [
       state('in', style({ transform: 'translateX(0)' })),
@@ -50,5 +50,13 @@ export class SimpleButtonAnimationComponent {
 
   toggle() {
     this.isOpen = !this.isOpen;
+  }
+
+  onAnimationStart(e: any): void {
+    console.log(e);
+  }
+
+  onAnimationDone(e: any): void {
+    console.log(e);
   }
 }

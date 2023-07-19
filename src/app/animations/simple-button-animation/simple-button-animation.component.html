@@ -12,6 +12,8 @@
 
 <div
   [@flyInOut]="isOpen ? 'in' : 'out'"
+  (@flyInOut.start)="onAnimationStart($event)"
+  (@flyInOut.done)="onAnimationDone($event)"
   *ngIf="isOpen"
   style="height: 200px; width: 200px; border: 1px solid black"
 >

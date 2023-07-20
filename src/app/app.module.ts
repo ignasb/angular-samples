@@ -10,12 +10,14 @@ import { FeaturesNgModule } from './ngfeatures/ngfeatures.module';
 import { Animations2Component } from './animations2/animations2.component';
 import { ListFilteringComponent } from './animations2/list-filtering/list-filtering.component';
 import { FormsModule } from '@angular/forms';
+import { ListFiltering2Component } from './animations2/list-filtering2/list-filtering2.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     Animations2Component,
     ListFilteringComponent,
+    ListFiltering2Component,
   ],
   imports: [
     BrowserModule,

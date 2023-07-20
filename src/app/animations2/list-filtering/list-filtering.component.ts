@@ -38,7 +38,7 @@ export class ListFilteringComponent {
   filteredItems: string[] = [];
 
   constructor() {
-    this.filteredItems = this.items;
+    this.filteredItems = [...this.items];
   }
 
   onSearch(predicate: string): void {

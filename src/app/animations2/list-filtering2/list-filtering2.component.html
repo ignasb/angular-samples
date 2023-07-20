@@ -1,0 +1,7 @@
+<input type="text" [ngModel]="filter" (ngModelChange)="onSearch($event)" />
+
+<ul [@listChange]="filteredItems.length">
+  <li *ngFor="let item of filteredItems">
+    <p><span>+</span>{{ item }}</p>
+  </li>
+</ul>

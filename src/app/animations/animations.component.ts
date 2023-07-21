@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { cardAnimation } from './animations';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -12,6 +13,10 @@ import { cardAnimation } from './animations';
 })
 export class AnimationsComponent {
   isCardHovered = false;
+
+  constructor(private route: ActivatedRoute) {
+    console.log(this.route.snapshot.data);
+  }
 
   onCardHover(): void {
     this.isCardHovered = true;

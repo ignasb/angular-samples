@@ -53,10 +53,10 @@ export class SimpleButtonAnimationComponent {
   }
 
   onAnimationStart(e: any): void {
-    console.log(e);
+    // console.log(e);
   }
 
   onAnimationDone(e: any): void {
-    console.log(e);
+    // console.log(e);
   }
 }

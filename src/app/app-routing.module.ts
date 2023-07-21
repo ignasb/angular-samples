@@ -13,19 +13,19 @@ const routes: Routes = [{
   path: 'animations',
   component: AnimationsComponent,
   data: {
-    transitionState: 'AnimationsPage'
+    animation: 'AnimationsPage'
   }
 }, {
   path: 'transitions',
   component: TransitionsComponent,
   data: {
-    transitionState: 'TransitionsPage'
+    animation: 'TransitionsPage'
   }
 }, {
   path: 'animations2',
   component: Animations2Component,
   data: {
-    transitionState: 'Animations2Page'
+    animation: 'Animations2Page'
   }
 }, {
   path: 'content-projection',

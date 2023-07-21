@@ -1,4 +1,5 @@
 import { AfterViewChecked, AfterViewInit, ChangeDetectionStrategy, Component, ViewChild } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-transitions',
@@ -9,6 +10,10 @@ import { AfterViewChecked, AfterViewInit, ChangeDetectionStrategy, Component, Vi
 export class TransitionsComponent implements AfterViewInit {
   @ViewChild('basicInput')
   inputElement!: { nativeElement: HTMLInputElement };
+
+  constructor(private route: ActivatedRoute) {
+    console.log(this.route.snapshot.data);
+  }
 
   ngAfterViewInit(): void {
     this.inputElement.nativeElement.addEventListener('transitionend', (ev) => {

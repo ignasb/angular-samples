@@ -1,4 +1,4 @@
-import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
+import { animate, group, query, sequence, stagger, style, transition, trigger } from '@angular/animations';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
@@ -15,20 +15,24 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         query('li span', stagger('50ms', [animate('200ms', style({
           transform: 'translateY(0px)',
         }))])),
-        query('li', style({
+        query('li ', style({
           opacity: 0,
-          transform: 'translate(-100px)'
+          transform: 'translate(-50px)'
         })),
-        query('li',
-          stagger('50ms', [animate('200ms',
-            style({
-              opacity: 1,
-              transform: 'translate(0px)'
-            }))]
-          ))
+        query('li ',
+          stagger('50ms', [
+            sequence([
+              animate('500ms ease', style({
+                opacity: 0,
+              })),
+              animate('500ms ease', style({
+                transform: 'translate(0px)',
+                opacity: 1
+              }))
+            ])
+          ]))
       ])
-    ])
-  ]
+    ])]
 })
 export class ListFiltering2Component {
   filter: string = '';

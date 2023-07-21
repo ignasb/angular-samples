@@ -1,5 +1,6 @@
-import { animate, style, transition, trigger } from '@angular/animations';
+import { animate, style, transition, trigger, useAnimation } from '@angular/animations';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { defaultListItemAnimation } from './list-filtering.animations';
 
 @Component({
   selector: 'app-list-filtering',
@@ -10,17 +11,23 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     trigger('listAnimation', [
       transition(':enter', [
         style({ opacity: 0.2 }),
-        animate('200ms', style({
-          transform: 'translateX(-10%)',
-          opacity: 1
-        }))
+        useAnimation(defaultListItemAnimation, {
+          params: {
+            opacity: 1,
+            transform: 'translate(-10%)',
+            time: '200ms'
+          }
+        })
       ]),
       transition(':leave', [
         style({ opacity: 0.8 }),
-        animate('200ms', style({
-          transform: 'translateX(10%)',
-          opacity: 0
-        }))
+        useAnimation(defaultListItemAnimation, {
+          params: {
+            opacity: 0,
+            transform: 'translateX(10%)',
+            time: '200ms'
+          }
+        })
       ])
     ])
   ]

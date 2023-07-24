@@ -5,6 +5,9 @@ import { InputoutputComponent } from './chapter01/inputoutput/inputoutput.compon
 import { ContainerComponent } from './chapter01/inputoutput/container/container.component';
 import { ChildaComponent } from './chapter01/inputoutput/childa/childa.component';
 import { ChildbComponent } from './chapter01/inputoutput/childb/childb.component';
+import { ServicesComponent } from './chapter01/services/services.component';
+import { SchildaComponent } from './chapter01/services/schilda/schilda.component';
+import { SchildbComponent } from './chapter01/services/schildb/schildb.component';
 
 
 
@@ -14,7 +17,10 @@ import { ChildbComponent } from './chapter01/inputoutput/childb/childb.component
     InputoutputComponent,
     ContainerComponent,
     ChildaComponent,
-    ChildbComponent
+    ChildbComponent,
+    ServicesComponent,
+    SchildaComponent,
+    SchildbComponent
   ],
   imports: [
     CommonModule

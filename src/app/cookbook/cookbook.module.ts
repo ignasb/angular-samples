@@ -8,6 +8,8 @@ import { ChildbComponent } from './chapter01/inputoutput/childb/childb.component
 import { ServicesComponent } from './chapter01/services/services.component';
 import { SchildaComponent } from './chapter01/services/schilda/schilda.component';
 import { SchildbComponent } from './chapter01/services/schildb/schildb.component';
+import { SettergetterComponent } from './chapter01/settergetter/settergetter.component';
+import { LoggerComponent } from './chapter01/settergetter/logger/logger.component';
 
 
 
@@ -20,7 +22,9 @@ import { SchildbComponent } from './chapter01/services/schildb/schildb.component
     ChildbComponent,
     ServicesComponent,
     SchildaComponent,
-    SchildbComponent
+    SchildbComponent,
+    SettergetterComponent,
+    LoggerComponent
   ],
   imports: [
     CommonModule

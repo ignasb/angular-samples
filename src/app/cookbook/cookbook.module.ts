@@ -10,6 +10,8 @@ import { SchildaComponent } from './chapter01/services/schilda/schilda.component
 import { SchildbComponent } from './chapter01/services/schildb/schildb.component';
 import { SettergetterComponent } from './chapter01/settergetter/settergetter.component';
 import { LoggerComponent } from './chapter01/settergetter/logger/logger.component';
+import { OnchangesComponent } from './chapter01/onchanges/onchanges.component';
+import { LogsComponent } from './chapter01/onchanges/logs/logs.component';
 
 
 
@@ -24,7 +26,9 @@ import { LoggerComponent } from './chapter01/settergetter/logger/logger.componen
     SchildaComponent,
     SchildbComponent,
     SettergetterComponent,
-    LoggerComponent
+    LoggerComponent,
+    OnchangesComponent,
+    LogsComponent
   ],
   imports: [
     CommonModule

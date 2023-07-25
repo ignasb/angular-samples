@@ -12,6 +12,8 @@ import { SettergetterComponent } from './chapter01/settergetter/settergetter.com
 import { LoggerComponent } from './chapter01/settergetter/logger/logger.component';
 import { OnchangesComponent } from './chapter01/onchanges/onchanges.component';
 import { LogsComponent } from './chapter01/onchanges/logs/logs.component';
+import { TemplatevariableComponent } from './chapter01/templatevariable/templatevariable.component';
+import { ChildaViewComponent } from './chapter01/templatevariable/childa/childa.component';
 
 
 
@@ -20,6 +22,7 @@ import { LogsComponent } from './chapter01/onchanges/logs/logs.component';
     Chapter01Component,
     InputoutputComponent,
     ContainerComponent,
+    ChildaViewComponent,
     ChildaComponent,
     ChildbComponent,
     ServicesComponent,
@@ -28,7 +31,8 @@ import { LogsComponent } from './chapter01/onchanges/logs/logs.component';
     SettergetterComponent,
     LoggerComponent,
     OnchangesComponent,
-    LogsComponent
+    LogsComponent,
+    TemplatevariableComponent
   ],
   imports: [
     CommonModule

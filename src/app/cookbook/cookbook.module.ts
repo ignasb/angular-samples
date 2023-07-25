@@ -16,11 +16,17 @@ import { TemplatevariableComponent } from './chapter01/templatevariable/template
 import { ChildaViewComponent } from './chapter01/templatevariable/childa/childa.component';
 import { ViewchildparentComponent } from './chapter01/viewchildparent/viewchildparent.component';
 import { ViewchildComponent } from './chapter01/viewchildparent/viewchild/viewchild.component';
+import { DynamiccontainerComponent } from './chapter01/dynamiccontainer/dynamiccontainer.component';
+import { DynamicchildaComponent } from './chapter01/dynamiccontainer/dynamicchilda/dynamicchilda.component';
+import { DynamicchildbComponent } from './chapter01/dynamiccontainer/dynamicchildb/dynamicchildb.component';
+import { DynamicchildcComponent } from './chapter01/dynamiccontainer/dynamicchildc/dynamicchildc.component';
+import { HostDirective } from './chapter01/dynamiccontainer/host.directive';
 
 
 
 @NgModule({
   declarations: [
+    HostDirective,
     Chapter01Component,
     InputoutputComponent,
     ContainerComponent,
@@ -36,7 +42,11 @@ import { ViewchildComponent } from './chapter01/viewchildparent/viewchild/viewch
     LogsComponent,
     TemplatevariableComponent,
     ViewchildparentComponent,
-    ViewchildComponent
+    ViewchildComponent,
+    DynamiccontainerComponent,
+    DynamicchildaComponent,
+    DynamicchildbComponent,
+    DynamicchildcComponent
   ],
   imports: [
     CommonModule

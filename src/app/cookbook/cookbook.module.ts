@@ -14,6 +14,8 @@ import { OnchangesComponent } from './chapter01/onchanges/onchanges.component';
 import { LogsComponent } from './chapter01/onchanges/logs/logs.component';
 import { TemplatevariableComponent } from './chapter01/templatevariable/templatevariable.component';
 import { ChildaViewComponent } from './chapter01/templatevariable/childa/childa.component';
+import { ViewchildparentComponent } from './chapter01/viewchildparent/viewchildparent.component';
+import { ViewchildComponent } from './chapter01/viewchildparent/viewchild/viewchild.component';
 
 
 
@@ -32,7 +34,9 @@ import { ChildaViewComponent } from './chapter01/templatevariable/childa/childa.
     LoggerComponent,
     OnchangesComponent,
     LogsComponent,
-    TemplatevariableComponent
+    TemplatevariableComponent,
+    ViewchildparentComponent,
+    ViewchildComponent
   ],
   imports: [
     CommonModule

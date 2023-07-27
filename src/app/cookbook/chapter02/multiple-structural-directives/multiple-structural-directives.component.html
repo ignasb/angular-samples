@@ -1,0 +1,5 @@
+<ng-container *ngFor="let i of [0, 1, 2, 3, 4, 5, 6]; let odd = odd">
+  <p *ngIf="odd">
+    {{ i }} <span style="color: red">{{ odd }}</span>
+  </p>
+</ng-container>

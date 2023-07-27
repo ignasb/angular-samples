@@ -26,6 +26,7 @@ import { SimpleDirectiveComponent } from './chapter02/simple-directive/simple-di
 import { SimpleDirectiveDirective } from './chapter02/simple-directive/simple-directive.directive';
 import { StructuralDirectiveComponent } from './chapter02/structural-directive/structural-directive.component';
 import { StructuralDirectiveDirective } from './chapter02/structural-directive/structural-directive.directive';
+import { MultipleStructuralDirectivesComponent } from './chapter02/multiple-structural-directives/multiple-structural-directives.component';
 
 
 
@@ -56,7 +57,8 @@ import { StructuralDirectiveDirective } from './chapter02/structural-directive/s
     SimpleDirectiveComponent,
     SimpleDirectiveDirective,
     StructuralDirectiveComponent,
-    StructuralDirectiveDirective
+    StructuralDirectiveDirective,
+    MultipleStructuralDirectivesComponent
   ],
   imports: [
     CommonModule

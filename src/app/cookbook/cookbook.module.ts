@@ -24,6 +24,8 @@ import { HostDirective } from './chapter01/dynamiccontainer/host.directive';
 import { Chapter02Component } from './chapter02/chapter02.component';
 import { SimpleDirectiveComponent } from './chapter02/simple-directive/simple-directive.component';
 import { SimpleDirectiveDirective } from './chapter02/simple-directive/simple-directive.directive';
+import { StructuralDirectiveComponent } from './chapter02/structural-directive/structural-directive.component';
+import { StructuralDirectiveDirective } from './chapter02/structural-directive/structural-directive.directive';
 
 
 
@@ -52,7 +54,9 @@ import { SimpleDirectiveDirective } from './chapter02/simple-directive/simple-di
     DynamicchildcComponent,
     Chapter02Component,
     SimpleDirectiveComponent,
-    SimpleDirectiveDirective
+    SimpleDirectiveDirective,
+    StructuralDirectiveComponent,
+    StructuralDirectiveDirective
   ],
   imports: [
     CommonModule

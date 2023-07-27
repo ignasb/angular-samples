@@ -16,7 +16,6 @@ export class AppComponent {
   @ViewChild(RouterOutlet) routerOutlet: any;
 
   constructor(private router: ActivatedRoute, private contexts: ChildrenOutletContexts) {
-    console.log(this.router.children);
   }
 
   getRouteAnimationData() {

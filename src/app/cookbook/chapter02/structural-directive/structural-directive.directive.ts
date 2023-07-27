@@ -8,7 +8,6 @@ export class StructuralDirectiveDirective {
   set appStructuralDirective(index: number) {
     if (index % 2 === 0) {
       this.vcr.createEmbeddedView(this.templateRef);
-      console.log(this.templateRef);
     } else
       this.vcr.clear();
   }

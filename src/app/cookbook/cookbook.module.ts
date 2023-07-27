@@ -21,6 +21,9 @@ import { DynamicchildaComponent } from './chapter01/dynamiccontainer/dynamicchil
 import { DynamicchildbComponent } from './chapter01/dynamiccontainer/dynamicchildb/dynamicchildb.component';
 import { DynamicchildcComponent } from './chapter01/dynamiccontainer/dynamicchildc/dynamicchildc.component';
 import { HostDirective } from './chapter01/dynamiccontainer/host.directive';
+import { Chapter02Component } from './chapter02/chapter02.component';
+import { SimpleDirectiveComponent } from './chapter02/simple-directive/simple-directive.component';
+import { SimpleDirectiveDirective } from './chapter02/simple-directive/simple-directive.directive';
 
 
 
@@ -46,7 +49,10 @@ import { HostDirective } from './chapter01/dynamiccontainer/host.directive';
     DynamiccontainerComponent,
     DynamicchildaComponent,
     DynamicchildbComponent,
-    DynamicchildcComponent
+    DynamicchildcComponent,
+    Chapter02Component,
+    SimpleDirectiveComponent,
+    SimpleDirectiveDirective
   ],
   imports: [
     CommonModule

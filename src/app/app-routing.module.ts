@@ -5,6 +5,7 @@ import { TransitionsComponent } from './animations/transitions/transitions.compo
 import { ContentProjectionComponent } from './ngfeatures/content-projection/content-projection.component';
 import { Animations2Component } from './animations2/animations2.component';
 import { Chapter01Component } from './cookbook/chapter01/chapter01.component';
+import { Chapter02Component } from './cookbook/chapter02/chapter02.component';
 
 const routes: Routes = [{
   path: '',
@@ -35,6 +36,13 @@ const routes: Routes = [{
     animation: 'chapter01'
   }
 }, {
+  path: 'chapter02',
+  component: Chapter02Component,
+  data: {
+    animation: 'chapter01'
+  }
+},
+{
   path: 'content-projection',
   component: ContentProjectionComponent
 }];

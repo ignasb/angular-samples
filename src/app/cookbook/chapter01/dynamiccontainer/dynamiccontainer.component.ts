@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { HostDirective } from './host.directive';
 import { Subject, mergeMap, takeUntil } from 'rxjs';
 import { DynamicContainerService } from './dynamic.container.service';
@@ -9,7 +9,7 @@ import { ComponentsLoaderService } from './components.loader.service';
   templateUrl: './dynamiccontainer.component.html',
   styleUrls: ['./dynamiccontainer.component.scss']
 })
-export class DynamiccontainerComponent {
+export class DynamiccontainerComponent implements OnInit, OnDestroy {
   @ViewChild(HostDirective, { static: true })
   hostDirective!: HostDirective;
   private destroySubject = new Subject();
@@ -24,6 +24,11 @@ export class DynamiccontainerComponent {
         takeUntil(this.destroySubject),
         mergeMap(ac => this.componentsLoaderService.loadComponent(vcr, ac))
       ).subscribe();
+  }
+
+  ngOnDestroy() {
+    this.destroySubject.next('');
+    this.destroySubject.complete();
   }
 
   loadAComponent(): void {

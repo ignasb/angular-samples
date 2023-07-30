@@ -6,6 +6,7 @@ import { ContentProjectionComponent } from './ngfeatures/content-projection/cont
 import { Animations2Component } from './animations2/animations2.component';
 import { Chapter01Component } from './cookbook/chapter01/chapter01.component';
 import { Chapter02Component } from './cookbook/chapter02/chapter02.component';
+import { Chapter03Component } from './cookbook/chapter03/chapter03.component';
 
 const routes: Routes = [{
   path: '',
@@ -38,6 +39,12 @@ const routes: Routes = [{
 }, {
   path: 'chapter02',
   component: Chapter02Component,
+  data: {
+    animation: 'chapter01'
+  }
+}, {
+  path: 'chapter03',
+  component: Chapter03Component,
   data: {
     animation: 'chapter01'
   }
